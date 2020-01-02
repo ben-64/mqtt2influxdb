@@ -1,0 +1,6 @@
+[GENERAL]
+influxdb = example
+mqtt = example
+
+[home]
+/home/(?P<measurement>[^/]+)/(?P<location>[^/]+) = {"measurement":(*measurement*),"tags":{"location":(*location*)},"fields":{"value":(*payload*)}}
